@@ -1,0 +1,53 @@
+.container {
+  margin-top: 10%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  color: aliceblue;
+  padding: 20px;
+}
+
+form {
+  border:none;
+  color: aliceblue;
+  padding: 20px;
+}
+
+form {
+  border:none;
+  color: aliceblue;
+  padding: 20px;
+}
+
+table {
+  background-color: transparent;
+  box-shadow: 0 0 35px rgb(25, 147, 196);
+  backdrop-filter: blur(15px);
+}
+
+h1 {
+  background-color: transparent;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgb(25, 147, 196);
+  border: none;
+  font-size: 40px;
+  padding: 5px;
+  text-align: center;
+  color: aliceblue;
+}
+/* client-list.component.css */
+.snack-info {
+  background-color: #007bff; /* Azul para o aviso de edição */
+  color: white;
+}
+
+.snack-success {
+  background-color: #28a745; /* Verde para o sucesso */
+  color: white;
+}
+
+.snack-error {
+  background-color: #dc3545; /* Vermelho para o erro */
+  color: white;
+}

@@ -1,0 +1,80 @@
+<div class="container mt-5">
+  <h1 class="form-title text-center">{{ client.id ? 'Editar Cliente' : 'Novo Orçamento' }}</h1>
+  <form (ngSubmit)="save()" #clientForm="ngForm">
+      <!-- Campo Nome -->
+      <div class="mb-3">
+          <label for="nome" class="form-label">Nome <span class="text-danger">*</span></label>
+          <div class="input-group">
+              <span class="input-group-text">
+                  <i class="material-icons">person</i>
+              </span>
+              <input type="text" class="form-control" id="nome" [(ngModel)]="client.nome" name="nome" required
+                  #nome="ngModel" />
+          </div>
+          <div *ngIf="nome.invalid && nome.touched" class="text-danger">
+              O nome é obrigatório.
+          </div>
+      </div>
+
+      <!-- Campo Email -->
+      <div class="mb-3">
+          <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+          <div class="input-group">
+              <span class="input-group-text">
+                  <i class="material-icons">email</i>
+              </span>
+              <input type="email" class="form-control" id="email" [(ngModel)]="client.email" name="email" required
+                  email #email="ngModel" />
+          </div>
+          <div *ngIf="email.invalid && email.touched" class="text-danger">
+              O email é obrigatório e deve ser válido.
+          </div>
+      </div>
+
+      <!-- Campo Telefone com Máscara -->
+      <div class="mb-3">
+          <label for="telefone" class="form-label">Telefone <span class="text-danger">*</span></label>
+          <div class="input-group">
+              <span class="input-group-text">
+                  <i class="material-icons">phone</i>
+              </span>
+              <input type="tel" class="form-control" id="telefone" [(ngModel)]="client.telefone" name="telefone"
+                  required mask="(00) 0 0000 0000" prefix="+55 " #telefone="ngModel"
+                  placeholder="(XX) 0 0000 0000" />
+          </div>
+          <div *ngIf="telefone.invalid && telefone.touched" class="text-danger">
+              O telefone é obrigatório.
+          </div>
+      </div>
+
+      <!-- Campo Empresa -->
+      <div class="mb-3">
+          <label for="empresa" class="form-label">Empresa</label>
+          <div class="input-group">
+              <span class="input-group-text">
+                  <i class="material-icons">business</i>
+              </span>
+              <input type="text" class="form-control" id="empresa" [(ngModel)]="client.empresa" name="empresa"
+                  #empresa="ngModel" />
+          </div>
+      </div>
+
+      <!-- Campo Solicitação -->
+      <div class="mb-3">
+          <label for="solicitacao" class="form-label">Solicitação</label>
+          <textarea class="form-control" id="solicitacao" [(ngModel)]="client.solicitacao" name="solicitacao"
+              rows="3" placeholder="Descreva a solicitação do cliente">
+        </textarea>
+      </div>
+
+      <!-- Ações -->
+      <div class="d-flex justify-content-between">
+          <a routerLink="/" class="btn btn-secondary">
+              <i class="material-icons">arrow_back</i> Voltar
+          </a>
+          <button type="submit" class="btn btn-success" [disabled]="!clientForm.form.valid">
+              <i class="material-icons">save</i> Salvar
+          </button>
+      </div>
+  </form>
+</div>

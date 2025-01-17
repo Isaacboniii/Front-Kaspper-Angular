@@ -1,0 +1,31 @@
+.container {
+  margin-top: 10%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(15px);
+  color: aliceblue;
+  padding: 20px;
+}
+
+form {
+  border:none;
+  color: aliceblue;
+  padding: 20px;
+}
+
+h1 {
+  background-color: transparent;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgb(25, 147, 196);
+  border: none;
+  font-size: 40px;
+  padding: 5px;
+  text-align: center;
+  color: aliceblue;
+}
+
+.snack-bar-success {
+  background-color: #4caf50; /* Verde de sucesso */
+  color: white;
+}
